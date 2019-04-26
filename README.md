@@ -1,5 +1,6 @@
 # Score
 A demo python script to process sports match scores.
+[![Build Status](https://travis-ci.com/Draaak/score.svg?branch=master)](https://travis-ci.com/Draaak/score)
 ## Prerequisites
 ### Python
 ### Pip
