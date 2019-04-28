@@ -6,10 +6,10 @@ import sys
 from src.rank import processScore
 from functools import reduce
 
-def main():
+def main(argv):
   parser = argparse.ArgumentParser(prog='score')
   parser.add_argument('source', nargs='?', help='file with match scores')
-  args = parser.parse_args()
+  args = parser.parse_args(argv[1:])
 
   leaderBoard = reduce(_addPoints, map(processScore, _readFile(args.source) if args.source else sys.stdin), {})
   results = sorted(leaderBoard.items(), key=lambda results: results[0])
@@ -28,4 +28,4 @@ def _addPoints(dic, points):
   return dic
 
 if __name__ == '__main__':
-  main()
+  main(sys.argv)

@@ -21,4 +21,8 @@ or
 ```bash
 $ cat scores.txt | python rank.py
 ```
-
+## Tests
+There is a number of unit tests and an integration test. You can run them with:
+```bash
+$ python -m pytest
+```
